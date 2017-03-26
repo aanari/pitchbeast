@@ -200,4 +200,50 @@ if($.find('#countdown')[0]) {
     }
   }
 
+  var startDate = Date.parse('Mar 01 2017');
+  var hours = Math.abs(Date.now() - startDate) / 36e5;
+  $('.subscriber-count').text(Math.round(hours / 12));
+
+  /*----- Countdown Timer ----- */
+  function readClock() {
+    var clock = Date.parse(countdownTimeRemaining) - Date.parse(new Date());
+    var minutes = Math.floor((clock/1000/60)%60);
+    var hours = Math.floor((clock/(1000*60*60))%24);
+    var days = Math.floor(clock/(1000*60*60*24));
+    var seconds = Math.floor((clock/1000)%60);
+
+    return {
+      'expiration': clock,
+      'days': days,
+      'hours': hours,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  }
+  function startClock(){
+    var clock = document.getElementById('launchCountdownTimer');
+    var interval = setInterval(function() {
+      var clockTimer = readClock();
+      if(clockTimer.expiration<=0){
+        clearInterval(interval);
+      } else {
+        clock.children[0].children[0].innerHTML = ('0' + clockTimer.days).slice(-2);
+        clock.children[1].children[0].innerHTML = ('0' + clockTimer.hours).slice(-2);
+        clock.children[2].children[0].innerHTML = ('0' + clockTimer.minutes).slice(-2);
+        clock.children[3].children[0].innerHTML = ('0' + clockTimer.seconds).slice(-2);
+      }
+    }, 1000);
+  }
+
+  var countdownTimeRemaining = 'May 01 2017';
+  var clockTimer = readClock();
+  var clock = document.getElementById('launchCountdownTimer');
+  clock.children[0].children[0].innerHTML = ('0' + clockTimer.days).slice(-2);
+  clock.children[1].children[0].innerHTML = ('0' + clockTimer.hours).slice(-2);
+  clock.children[2].children[0].innerHTML = ('0' + clockTimer.minutes).slice(-2);
+  clock.children[3].children[0].innerHTML = ('0' + clockTimer.seconds).slice(-2);
+  startClock();
+
+
+
 });

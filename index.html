@@ -78,14 +78,33 @@
             <div class="app-sub-content">
               <h1 class="wow fadeInLeft" data-wow-delay="0s">Make Your<br class="hidden-xs"> Business Pitch<br class="hidden-xs"> Roar.</h1>
               <p class="wow fadeInLeft" data-wow-delay="0.1s">
-                Our AI and expert team analyzes your pitch deck, offering instant recommendations.<br><br>Join <u>523</u> other entrepreneurs who are ready to succeed.
+                Our AI and expert team analyzes your pitch deck, offering instant recommendations.<br><br>Join <u class="subscriber-count"></u> other entrepreneurs who are ready to succeed.
               </p>
               <div class="form wow fadeInLeft" data-wow-delay="0.3s">
-              <form class="subscribe-form wow zoomIn mailchimp">
-              <input class="mail" type="email" name="email" placeholder="Join the wait list" autocomplete="off"><input class="submit-button" type="submit" value="Subscribe">
-              </form>
-              <div class="mailchimp-success success-message" style="display: none">Thanks! Please confirm your subscription from your email inbox</div>
-              <div class="mailchimp-error error-message" style="display: none">Error! Please enter a valid email address</div>
+                <form class="subscribe-form wow zoomIn mailchimp">
+                <input class="mail" type="email" name="email" placeholder="Join the wait list" autocomplete="off"><input class="submit-button" type="submit" value="Subscribe">
+                </form>
+                <div class="mailchimp-success success-message" style="display: none">Thanks! Please confirm your subscription from your email inbox</div>
+                <div class="mailchimp-error error-message" style="display: none">Error! Please enter a valid email address</div>
+              </div>
+
+              <div class="wow fadeInLeft" id="launchCountdownTimer">
+                <div class="cd-box">
+                  <span id="launchCountdownTimerDays"></span>
+                  <div class="strings">Days</div>
+                </div>
+                <div class="cd-box">
+                  <span id="launchCountdownTimerHours"></span>
+                  <div class="strings">Hours</div>
+                </div>
+                <div class="cd-box">
+                  <span id="launchCountdownTimerMinutes"></span>
+                  <div class="strings">Minutes</div>
+                </div>
+                <div class="cd-box">
+                  <span id="launchCountdownTimerSeconds"></span>
+                  <div class="strings">Seconds</div>
+                </div>
               </div>
             </div>
           </div>
@@ -110,7 +129,7 @@
                 <img src="assets/logos/feature_icon.png" height="60" width="60" alt="Service" />
               </div>
               <div class="services-description">
-                <h1>Instant Results</h1>
+                <h1 class="colored-heading">Instant Results</h1>
                 <p>
                   <span class="bolder">You get your results back within minutes</span>, not hours or days. Save valuable time, money, and hassle and focus on what you and your organization do best.
                 </p>
@@ -121,7 +140,7 @@
                 <img class="icon-2" src="assets/logos/feature_icon_2.png" height="60" width="60" alt="Service" />
               </div>
               <div class="services-description">
-                <h1>Truly Personalized</h1>
+                <h1 class="colored-heading">Truly Personalized</h1>
                 <p>
                   Our advanced machine learning algorithms combined with our expert coaches gives you <span class="bolder">insights into YOUR pitch and industry unmatched anywhere else</span>.
                 </p>
@@ -132,7 +151,7 @@
                 <img class="icon-3" src="assets/logos/feature_icon_3.png" height="60" width="60" alt="Service" />
               </div>
               <div class="services-description">
-                <h1>Enterprise Security</h1>
+                <h1 class="colored-heading">Enterprise Security</h1>
                 <p>
                   Your business data is <span class="bolder">secured by state-of-the-art data encryption</span>, and our team has years of experience in security technologies and compliance.
                 </p>
