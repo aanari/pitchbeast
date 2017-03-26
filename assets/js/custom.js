@@ -176,39 +176,28 @@ if($.find('#countdown')[0]) {
   });
 
 
-/*----- Subscription Form ----- */
+  /*----- Subscription Form ----- */
 
-$('.subscribe-form').submit(function(e) {
-    e.preventDefault();
-    var postdata = $('.subscribe-form').serialize();
-    $.ajax({
-        type: 'POST',
-        url: 'assets/php/subscribe.php',
-        data: postdata,
-        dataType: 'json',
-        success: function(json) {
-            if(json.valid == 0) {
-                $('.success-message').hide();
-                $('.error-message').hide();
-                $('.error-message').html(json.message);
-                $('.error-message').fadeIn('fast', function(){
-                    $('.subscribe-form').addClass('animated flash').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                        $(this).removeClass('animated flash');
-                    });
-                });
-            }
-            else {
-                $('.error-message').hide();
-                $('.success-message').hide();
-                $('.subscribe-form').hide();
-                $('.success-message').html(json.message);
-                $('.success-message').fadeIn('fast', function(){
-                    $('.top-content').backstretch("resize");
-                });
-            }
-        }
-    });
-});
+  $('.mailchimp').ajaxChimp({
+    callback: mailchimpCallback,
+    url: "http://pitchbeast.us15.list-manage.com/subscribe/post?u=bff5f20f3a8efb222faf6bc00&amp;id=02423c422f" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
+  });
 
+  function mailchimpCallback(resp) {
+    if (resp.result === 'success') {
+      $('.error-message').hide();
+      $('.success-message').fadeIn('fast', function(){
+        $('.top-content').backstretch("resize");
+      });
+
+    } else if (resp.result === 'error') {
+      $('.success-message').hide();
+      $('.error-message').fadeIn('fast', function(){
+        $('.subscribe-form').addClass('animated flash').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+          $(this).removeClass('animated flash');
+        });
+      });
+    }
+  }
 
 });

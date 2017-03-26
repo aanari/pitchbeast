@@ -172,15 +172,15 @@ body {
 }
 
 .error-message {
-	color: #FF3333;
+	color: #a03737;
 	font-family: Roboto;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 .success-message {
-	color:#33cc33;
+	color: #37a066;
 	font-family: Roboto;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 
@@ -1220,7 +1220,8 @@ body {
  border-radius: 5px 0 0 5px;
  outline: none;
  height: 40px;
- padding: 0 150px 0 20px;
+ padding: 0 20px;
+ width: 200px;
  box-shadow: none;
  -webkit-box-sizing: content-box;
  -moz-box-sizing: content-box;

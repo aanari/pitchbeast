@@ -76,16 +76,16 @@
 
           <div class="col-md-7 col-sm-7 nopadding">
             <div class="app-sub-content">
-              <h1 class="wow fadeInLeft" data-wow-delay="0s">Make Your<br class="hidden-xs">Business Pitch<br class="hidden-xs">Roar.</h1>
+              <h1 class="wow fadeInLeft" data-wow-delay="0s">Make Your<br class="hidden-xs"> Business Pitch<br class="hidden-xs"> Roar.</h1>
               <p class="wow fadeInLeft" data-wow-delay="0.1s">
                 Our AI and expert team analyzes your pitch deck, offering instant recommendations.<br><br>Join <u>523</u> other entrepreneurs who are ready to succeed.
               </p>
               <div class="form wow fadeInLeft" data-wow-delay="0.3s">
-              <form class="subscribe-form wow zoomIn" action="assets/php/subscribe.php" method="post" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
+              <form class="subscribe-form wow zoomIn mailchimp">
               <input class="mail" type="email" name="email" placeholder="Join the wait list" autocomplete="off"><input class="submit-button" type="submit" value="Subscribe">
               </form>
-              <div class="success-message"></div>
-              <div class="error-message"></div>
+              <div class="mailchimp-success success-message" style="display: none">Thanks! Please confirm your subscription from your email inbox</div>
+              <div class="mailchimp-error error-message" style="display: none">Error! Please enter a valid email address</div>
               </div>
             </div>
           </div>
@@ -196,6 +196,7 @@
 
 <!-- Jquery and Js Plugins -->
   <script type="text/javascript" src="assets/js/jquery-2.1.1.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/plugins.js"></script>
   <script type="text/javascript" src="assets/js/menu.js"></script>
