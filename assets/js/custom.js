@@ -180,7 +180,7 @@ if($.find('#countdown')[0]) {
 
   $('.mailchimp').ajaxChimp({
     callback: mailchimpCallback,
-    url: "http://pitchbeast.us15.list-manage.com/subscribe/post?u=bff5f20f3a8efb222faf6bc00&amp;id=02423c422f" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
+    url: "https://pitchbeast.us15.list-manage.com/subscribe/post?u=bff5f20f3a8efb222faf6bc00&amp;id=02423c422f" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
   });
 
   function mailchimpCallback(resp) {
