@@ -557,6 +557,11 @@ body {
   color: #1f5b3a !important;
 }
 
+.img-bordered {
+  box-shadow: 0 0 0 3pt #37a066;
+  border: 2px solid #FFF;
+}
+
 
 .app-sub-content p {
 	font-family: Poppins;
@@ -984,6 +989,10 @@ body {
 
 .testimonials-2 {
   margin-bottom: 5em;
+}
+
+.testimonial-single {
+  padding-top: 4px;
 }
 
 .testimonial-single img {
